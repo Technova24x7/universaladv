@@ -1,0 +1,89 @@
+---
+// Indoor Signs Gallery Images
+import neon1 from "../assets/folder_pages/INDOOR SIGNS/Neon Signs/WhatsApp Image 2023-07-24 at 1.20.26 PM.jpeg";
+import neon2 from "../assets/folder_pages/INDOOR SIGNS/Neon Signs/WhatsApp Image 2023-07-25 at 11.17.49 AM.jpeg";
+import neon3 from "../assets/folder_pages/INDOOR SIGNS/Neon Signs/WhatsApp Image 2023-07-25 at 11.31.47 AM (1).jpeg";
+import neon4 from "../assets/folder_pages/INDOOR SIGNS/Neon Signs/WhatsApp Image 2023-07-25 at 11.31.47 AM.jpeg";
+import wayfinding1 from "../assets/folder_pages/INDOOR SIGNS/Wayfinding Signage/Cover-GPL-1-1.jpg";
+import wayfinding2 from "../assets/folder_pages/INDOOR SIGNS/Wayfinding Signage/How-Kochi-Ithile-Wayfinding-Signages-Improved-Public-Access-Through-Information-Systems_Main-image.jpg";
+import wayfinding3 from "../assets/folder_pages/INDOOR SIGNS/Wayfinding Signage/INTERNAL4.jpg";
+import led1 from "../assets/folder_pages/INDOOR SIGNS/LED Backlit Signs/WhatsApp Image 2023-07-25 at 11.17.46 AM (1).jpeg";
+import led2 from "../assets/folder_pages/INDOOR SIGNS/LED Backlit Signs/WhatsApp Image 2023-07-25 at 11.17.47 AM.jpeg";
+import wallGraphics from "../assets/folder_pages/INDOOR SIGNS/Wall Graphics/WhatsApp Image 2023-07-25 at 11.17.44 AM (3).jpeg";
+import reception from "../assets/folder_pages/INDOOR SIGNS/Reception Signs/WhatsApp Image 2023-07-25 at 11.17.38 AM.jpeg";
+import vinyl from "../assets/folder_pages/INDOOR SIGNS/Vinyl Lettering/vinyl-printing-hyderabad2.jpg";
+
+const images = [
+    neon1.src,
+    wayfinding1.src,
+    led1.src,
+    neon2.src,
+    wallGraphics.src,
+    wayfinding2.src,
+    neon3.src,
+    led2.src,
+    reception.src,
+    wayfinding3.src,
+    vinyl.src,
+    neon4.src,
+];
+
+const altTexts = [
+    "Neon Sign Installation",
+    "Wayfinding Signage System",
+    "LED Backlit Sign",
+    "Custom Neon Sign",
+    "Wall Graphics & Murals",
+    "Directional Wayfinding Signs",
+    "Illuminated Neon Signage",
+    "LED Backlit Reception Sign",
+    "Reception Area Signage",
+    "Interior Wayfinding",
+    "Vinyl Lettering",
+    "Neon Sign Display",
+];
+---
+
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row gap-12">
+            <!-- Left Side: Heading -->
+            <div class="md:w-[30%] flex items-start pt-8">
+                <div class="sticky top-24">
+                    <h2
+                        class="text-4xl font-bold text-gray-900 tracking-tight mb-4"
+                    >
+                        Indoor Signs
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-xs">
+                        Transform your interior spaces with professional indoor
+                        signage. From vibrant neon signs to elegant wayfinding
+                        systems and LED backlit displays.
+                    </p>
+                    <div class="w-20 h-1 bg-indigo-600 mt-6"></div>
+                </div>
+            </div>
+
+            <!-- Right Side: Image Grid -->
+            <div class="md:w-[70%]">
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+                >
+                    {
+                        images.map((image, index) => (
+                            <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-[4/3]">
+                                <img
+                                    src={image}
+                                    alt={altTexts[index]}
+                                    class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                />
+                                <div class="absolute inset-0 bg-black/5"></div>
+
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,90 @@
+---
+// Outdoor Signs Gallery Images
+import channelLetters from "../assets/folder_pages/OUTDOOR  BUILDING SIGNS/Channel Letters/WhatsApp Image 2023-07-24 at 1.21.00 PM (2).jpeg";
+import illuminated3D from "../assets/folder_pages/OUTDOOR  BUILDING SIGNS/3D Illuminated Letters/WhatsApp Image 2023-07-24 at 1.21.00 PM.jpeg";
+import storeFront from "../assets/folder_pages/OUTDOOR  BUILDING SIGNS/Store Front Signage/WhatsApp Image 2023-07-24 at 1.21.02 PM.jpeg";
+import acpFabricated from "../assets/folder_pages/OUTDOOR  BUILDING SIGNS/ACP  Fabricated Signage/WhatsApp Image 2023-07-24 at 1.21.01 PM.jpeg";
+import lightbox from "../assets/folder_pages/OUTDOOR  BUILDING SIGNS/Lightboxes/WhatsApp Image 2023-07-24 at 2.03.57 PM (2).jpeg";
+import windowDecals from "../assets/folder_pages/OUTDOOR  BUILDING SIGNS/Window Decals/glass-partition-decorated-using-printed-glass-film-1024x768.jpeg";
+import oneWayVision from "../assets/folder_pages/OUTDOOR  BUILDING SIGNS/One Way Vision Windows/WhatsApp Image 2023-07-24 at 2.07.02 PM.jpeg";
+import digitalDisplay from "../assets/folder_pages/OUTDOOR  BUILDING SIGNS/Digital Signs and Displays/WhatsApp Image 2023-07-24 at 1.38.00 PM.jpeg";
+import metalSign from "../assets/folder_pages/OUTDOOR  BUILDING SIGNS/Metal Signs/WhatsApp Image 2023-07-24 at 1.37.58 PM.jpeg";
+import windowGraphics from "../assets/folder_pages/OUTDOOR  BUILDING SIGNS/Window Graphics/2-full-colour-graphics-menu-image.jpg";
+import ledBacklit from "../assets/folder_pages/OUTDOOR  BUILDING SIGNS/LED Backlit Signs/WhatsApp Image 2023-07-24 at 2.03.57 PM (1).jpeg";
+import companySign from "../assets/folder_pages/OUTDOOR  BUILDING SIGNS/Company Signage/WhatsApp Image 2023-07-24 at 1.20.48 PM.jpeg";
+
+import { Image } from "astro:assets";
+
+const images = [
+    channelLetters.src,
+    illuminated3D.src,
+    storeFront.src,
+    acpFabricated.src,
+    lightbox.src,
+    windowDecals.src,
+    oneWayVision.src,
+    digitalDisplay.src,
+    metalSign.src,
+    windowGraphics.src,
+    ledBacklit.src,
+    companySign.src,
+];
+const altTexts = [
+    "Channel Letters Signage",
+    "3D Illuminated Letters",
+    "Store Front Signage",
+    "ACP Fabricated Signage",
+    "Lightbox Sign",
+    "Window Decals",
+    "One Way Vision Window",
+    "Digital Display Sign",
+    "Metal Sign",
+    "Window Graphics",
+    "LED Backlit Sign",
+    "Company Signage",
+];
+---
+
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row gap-12">
+            <!-- Left Side: Heading -->
+            <div class="md:w-[30%] flex items-start pt-8">
+                <div class="sticky top-24">
+                    <h2
+                        class="text-4xl font-bold text-gray-900 tracking-tight mb-4"
+                    >
+                        Outdoor Signs
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-xs">
+                        Make a bold statement with our premium outdoor signage.
+                        From illuminated channel letters to eye-catching
+                        storefront displays and digital signs.
+                    </p>
+                    <div class="w-20 h-1 bg-indigo-600 mt-6"></div>
+                </div>
+            </div>
+
+            <!-- Right Side: Image Grid -->
+            <div class="md:w-[70%]">
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+                >
+                    {
+                        images.map((image, index) => (
+                            <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-[4/3]">
+                                <img
+                                    src={image}
+                                    alt={altTexts[index]}
+                                    class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                />
+                               <div class="absolute inset-0 bg-black/5"></div>
+
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
